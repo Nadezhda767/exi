@@ -1,0 +1,252 @@
+ /* Base Styles */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+/* Шрифты */
+/* font-family: "Unbounded", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+
+/* font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+
+
+/* Header Styles */
+.whole_header {
+    width: 100%;
+    height: 150px;
+    background-image: url(/image/upper_band.png);
+    background-size: cover; /* масштабирует картинку для покрытия блока */
+}
+
+.city {
+    margin-top: 0%;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.search_line {
+    height: 67px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 650px;
+}
+
+.search_line img:last-child {
+    margin-left: auto;
+}
+
+.text_for_search {
+    font-size: 20px;
+    color: #a9a8a8;
+    margin: 0 15px;
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+.main_panel {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;/* запрещает уменьшение размера */
+}
+/* Filter block */
+.container_favourites {
+    width: 1152px;
+    height: 146px;
+    margin-top: 50px ;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.naming_favourites {
+    font-size: 50px;
+    margin-bottom: 32px;
+    
+}
+.filter_block {
+    display: flex;
+    gap: 300px;
+}
+.first_filter {
+    width: 391px;
+    height: 51px;
+    border-radius: 10px;
+    border: 2px solid rgb(226, 225, 225);
+}
+.second_filter {
+    width: 543px;
+    height: 51px;
+    border-radius: 10px;
+    border: 2px solid rgb(226, 225, 225);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #a9a8a8;
+}
+
+
+/* Product Grid */
+.container-body {
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.conteiner_goods {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));/* Автоматическое заполнение пространства колонками минимальной шириной 235px */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.first_goods {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid rgb(226, 225, 225);
+    border-radius: 15px;
+
+
+}
+
+.foto_block {
+    width: 210px;
+    height: 210px;
+    background-color: #a9a8a8;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;/* обрезает выходящее за границы содержимое */
+}
+
+.foto_block img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;/* заполнение пространства с сохранением пропорций */
+}
+    
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    background-image: url(/image/fon_button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;    
+    border: none;
+    padding: 8px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    font-weight: 500;
+} 
+.card-title {
+    padding-top: 15px;
+   padding-left: 15px;
+
+}
+.card-text {
+    padding-top: 10px;
+    padding-bottom:15px ;
+    padding-left: 15px;
+}
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0 40px;
+    }
+    .search_line {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 20px;
+    }
+    .search_line {
+        order: 2;
+        max-width: 100%;
+        margin-top: 15px;
+    }
+    .main_panel {
+        order: 1;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .city {
+        padding-left: 20px;
+    }
+    .header {
+        padding: 0 15px;
+    }
+    .search_line {
+        height: 50px;
+    }
+    .search_line img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteiner_goods {
+        grid-template-columns: 1fr 1fr;
+    }
+    .product_card {
+        padding: 10px;
+    }
+    .foto_block {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+}
+/* Bottom*/
+.bottom {
+    width: 100%;
+    height: 300px;
+    background-image: url(/image/end_band.png);
+    background-size: cover; /* масштабирует картинку для покрытия блока */
+}
+
+
+
+
+

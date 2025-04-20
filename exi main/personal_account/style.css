@@ -1,0 +1,379 @@
+/* Base Styles */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+/* Шрифты */
+
+/* font-family: "Unbounded", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+/* font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+/* Header Styles */
+.whole_header {
+    width: 100%;
+    height: 150px;
+    background-image: url(/image/upper_band.png);
+    background-size: cover; /* масштабирует картинку для покрытия блока */
+}
+
+.city {
+    margin-top: 0%;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.search_line {
+    height: 67px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 650px;
+}
+
+.search_line img:last-child {
+    margin-left: auto;
+}
+
+.text_for_search {
+    font-size: 20px;
+    color: #a9a8a8;
+    margin: 0 15px;
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+.main_panel {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;/* запрещает уменьшение размера */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0 40px;
+    }
+    .search_line {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 20px;
+    }
+    .search_line {
+        order: 2;
+        max-width: 100%;
+        margin-top: 15px;
+    }
+    .main_panel {
+        order: 1;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .city {
+        padding-left: 20px;
+    }
+    .header {
+        padding: 0 15px;
+    }
+    .search_line {
+        height: 50px;
+    }
+    .search_line img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Основная часть */
+.body_account{
+    height: 422px;
+    width: 1153px;
+    display: flex;
+    gap: 37px;
+    margin: auto;
+    margin-top: 78px;
+    margin-bottom: 133px;
+    background-color: #f3f3f3;
+}
+.profile {
+    height: 345px;
+    width: 391px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.upper_line{
+    display: flex;
+    height: 63px;
+    width: 350px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-right: 19px;
+    gap: 24px;
+
+}
+.image_man{
+    height: 46px;
+    width: 46px;
+    background-color: #f3f3f3;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.text_fio{
+    width: 207px;
+    display: flex;
+    align-items: center;
+
+}
+.conteiner_bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.btn-primary {
+    width: 111px;
+    height: 51px;
+    border-radius: 25px;
+    background-color: #36ABFF;
+    background: cover;
+    border: none;
+    margin-top: 40px;
+    margin-left: 25px;
+    color: #ffffff;
+    font-size: 16px;
+
+
+}
+.btn-price{
+    width: 334px;
+    height: 46px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+}
+.btn-settings{
+    width: 334px;
+    height: 46px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+
+}
+.list_profile {
+    height: 422px;
+    width: 725px;
+    display: grid;
+    justify-items: center;
+    gap: 26px;
+
+}
+.first_list {
+    height: 134px;
+    width: 725px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.upper_line2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-left: 25px;
+    width: 675px;
+    height: 29px;
+}
+.text_line {
+    font-size: 18px;
+}
+.button_text {
+    font-size: 15px;
+    color: #979797;
+}
+
+.second_list {
+    height:102px ;
+    width:725px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.third_list {
+    height: 134px ;
+    width: 725px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.box1 {
+    display: flex;
+    gap: 34px;
+    margin-left: 25px;
+    margin-top: 14px;
+}
+.box_1_1 {
+    height: 55px;
+    width: 186px;
+    border-radius: 10px;
+    background-color:  #f3f3f3;
+}
+.box_1_2 {
+    height: 55px;
+    width: 186px;
+    border-radius: 10px;
+    background-color:  #f3f3f3;
+}
+.box_1_3 {
+    height: 55px;
+    width: 186px;
+    border-radius: 10px;
+    background-color:  #f3f3f3;
+}
+.box2 {
+    width: 725px;
+    height: 102px;
+    display: flex;
+    gap: 23px;
+}
+.box_2_1 {
+    width: 229px;
+    height: 102px;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+.naming1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 22px;
+}
+.favorites {
+    display: grid;
+    gap: 10px;
+}
+.favorites_name {
+    font-size: 18px;
+}
+.goods {
+    font-size: 12px;
+}
+.box_2_2 {
+    width: 229px;
+    height: 102px;
+    background-color: #ffffff;
+    border-radius: 25px;
+
+
+}
+.naming2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 22px;
+}
+.purchases {
+    display: grid;
+    gap: 10px;
+}
+.purchases_name {
+    font-size: 18px;
+}
+.see {
+    font-size: 12px;
+}
+
+.box3 {
+    width: 725px;
+    height: 134px;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+.service {
+    margin-top: 19px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+.container_box{
+    display: flex;
+    margin-top: 20px;
+    gap: 90px;
+    margin-left: 25px;
+    font-size: 14px;
+}
+.box_3_1 {
+    width: 259px;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    border: none;
+}
+.box_3_2 {
+    width: 259px;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+
+
+/* Bottom*/
+.bottom {
+    width: 100%;
+    height: 300px;
+    background-image: url(/image/end_band.png);
+    background-size: cover; /* масштабирует картинку для покрытия блока */
+}
+
