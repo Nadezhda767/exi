@@ -47,6 +47,9 @@ font-style: normal; */
     padding: 0 80px;
     flex-wrap: wrap;
     gap: 20px;
+    top: 0;
+    left: 0;
+    right: 0;  
 }
 
 .search_line {
@@ -205,6 +208,8 @@ font-style: normal; */
     border-color: rgb(8, 148, 247);
 }
 
+
+  
 
 
 
