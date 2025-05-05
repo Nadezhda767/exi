@@ -208,7 +208,22 @@ font-style: normal; */
     border-color: rgb(8, 148, 247);
 }
 
-
+/*анимация картинок*/
+.main_panel {
+    display: flex;
+    gap: 20px;
+  }
+  .main_panel img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  .main_panel img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
   
 
 
